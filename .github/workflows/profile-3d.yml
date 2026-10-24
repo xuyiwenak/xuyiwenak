@@ -1,0 +1,46 @@
+name: Generate 3D contribution skyline
+
+on:
+  schedule:
+    - cron: "43 18 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/profile-3d.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contribution-3d
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+
+      - name: Generate 3D contribution calendars
+        uses: yoshi389111/github-profile-3d-contrib@7d95e7d4cdc028dd1e1cbd957d65f35efb12ae39 # v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Publish 3D calendars
+        uses: crazy-max/ghaction-github-pages@df5cc2bfa78282ded844b354faee141f06b41865 # v4
+        with:
+          target_branch: profile-3d
+          build_dir: profile-3d-contrib
+          keep_history: true
+          allow_empty_commit: false
+          jekyll: false
+          commit_message: "Update 3D contribution skyline"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
