@@ -1,4 +1,4 @@
-# 👋 你好，我是文余两人
+# hi I'm Evan Xu
 
 ## 🐍 我的 GitHub 贡献足迹
 
