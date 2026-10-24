@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Evan Xu 👋</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira%20Code&amp;size=22&amp;duration=3000&amp;pause=1200&amp;color=2F81F7&amp;center=true&amp;vCenter=true&amp;width=680&amp;height=60&amp;lines=Building%20useful%20tools%20with%20AI%3BExploring%20code%2C%20games%20and%20ideas%3BFrom%20an%20idea%20to%20a%20working%20project" alt="Building useful tools with AI · Exploring code, games and ideas · From an idea to a working project" />
+  <img src="https://raw.githubusercontent.com/xuyiwenak/xuyiwenak/main/assets/typing.svg" alt="Building useful tools with AI · Exploring code, games and ideas · From an idea to a working project" />
 </p>
 
 <p align="center">记录工具开发、AI 应用与游戏实验。</p>
